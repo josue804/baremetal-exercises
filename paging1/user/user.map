@@ -1,0 +1,90 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../simpleio/libio.a(simpleio.o)
+                              user.o (setWindow)
+../../simpleio/libio.a(serial.o)
+                              ../../simpleio/libio.a(simpleio.o) (serial_putc)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000400000                . = 0x400000
+
+.rodata.str1.1  0x0000000000400000       0x5e
+ .rodata.str1.1
+                0x0000000000400000       0x57 user.o
+ .rodata.str1.1
+                0x0000000000400057        0x7 ../../simpleio/libio.a(simpleio.o)
+
+.eh_frame       0x0000000000400060      0x1a8
+ .eh_frame      0x0000000000400060       0x54 user.o
+ .eh_frame      0x00000000004000b4      0x154 ../../simpleio/libio.a(simpleio.o)
+                                        0x16c (size before relaxing)
+
+.text           0x0000000000401000     0x15c0
+                0x0000000000401000                _text_start = .
+ *(.text)
+ .text          0x0000000000401000       0x92 user.o
+                0x0000000000401000                kputs
+                0x0000000000401029                cmain
+ .text          0x0000000000401092        0xb userlib.o
+                0x0000000000401092                entry
+ *fill*         0x000000000040109d        0x3 
+ .text          0x00000000004010a0      0x471 ../../simpleio/libio.a(simpleio.o)
+                0x0000000000401144                setVideo
+                0x000000000040114e                setWindow
+                0x000000000040119c                setAttr
+                0x00000000004011a6                cls
+                0x0000000000401229                putchar
+                0x0000000000401359                puts
+                0x0000000000401382                printf
+ .text          0x0000000000401511       0x2b ../../simpleio/libio.a(serial.o)
+                0x0000000000401511                serial_putc
+                0x000000000040153c                _text_end = .
+ *(.rodata)
+ .rodata        0x000000000040153c       0x58 ../../simpleio/libio.a(simpleio.o)
+ *(.data)
+ .data          0x0000000000401594        0x0 user.o
+ .data          0x0000000000401594     0x1009 userlib.o
+                0x0000000000402594                kputc
+ *fill*         0x000000000040259d        0x3 
+ .data          0x00000000004025a0       0x10 ../../simpleio/libio.a(simpleio.o)
+ .data          0x00000000004025b0        0x0 ../../simpleio/libio.a(serial.o)
+                0x00000000004025b0                _start_bss = .
+ *(COMMON)
+ *(.bss)
+ .bss           0x00000000004025b0        0x0 user.o
+ .bss           0x00000000004025b0        0x0 userlib.o
+ .bss           0x00000000004025b0       0x10 ../../simpleio/libio.a(simpleio.o)
+ .bss           0x00000000004025c0        0x0 ../../simpleio/libio.a(serial.o)
+                0x00000000004025c0                _end_bss = .
+LOAD user.o
+LOAD userlib.o
+LOAD ../../simpleio/libio.a
+OUTPUT(user elf32-i386)
+
+.iplt           0x00000000004025c0        0x0
+ .iplt          0x0000000000000000        0x0 user.o
+
+.igot.plt       0x00000000004025c0        0x0
+ .igot.plt      0x0000000000000000        0x0 user.o
+
+.rel.dyn        0x00000000004025c0        0x0
+ .rel.iplt      0x0000000000000000        0x0 user.o
+ .rel.text      0x0000000000000000        0x0 user.o
+
+.comment        0x0000000000000000       0x2b
+ .comment       0x0000000000000000       0x2b user.o
+                                         0x2c (size before relaxing)
+ .comment       0x0000000000000000       0x2c ../../simpleio/libio.a(simpleio.o)
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 user.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../simpleio/libio.a(simpleio.o)

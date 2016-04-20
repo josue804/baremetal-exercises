@@ -27,7 +27,10 @@ void kernel() {
   unsigned* hdrs      = bd->headers;
   unsigned* mmap      = bd->mmap;
   unsigned  i;
-  setWindow(2, 22, 0, 45);   // kernel on left hand side
+
+  setAttr(0x2e);
+  cls();
+  setWindow(1, 23, 1, 45);   // kernel on left hand side
   cls();
   printf("Protected kernel has booted!\n");
 
@@ -60,4 +63,10 @@ void csyscall() {  /* A trivial system call */
          user.regs.eax, user.regs.ebx, user.iret.eip, user.iret.esp);*/
   putchar(user.regs.eax);
   switchToUser(&user);
+}
+
+//Is called from kernel.s, verifies that we are in kernel mode
+void yieldimp() {
+	printf("Yielding...\n");
+	switchToUser(&user); //executes a context switch from kernel mode to user mode
 }

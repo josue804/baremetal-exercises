@@ -17,5 +17,5 @@ kputc:	pushl	%eax
 
 	#function that tries to halt the machine while in user mode
 	.globl yield
-yield:	hlt		#halts machine
-	jmp yield	#if halt fails, jmps to beginning of yield function
+yield:	int	$129	#calls the halt interrupt, switches to kernel mode
+	ret		#if halt fails, jmps to beginning of yield function

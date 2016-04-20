@@ -604,7 +604,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 016e 66B82000 	>>  mov $KERN_CS,%ax
  233 0172 C1E010   	>>  shl $16,%eax
- 233 0175 BAD00300 	>>  movl $exc0,%edx
+ 233 0175 BAF00300 	>>  movl $exc0,%edx
  233      00
  233 017a 6689D0   	>>  mov %dx,%ax
  233 017d 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -628,7 +628,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 018c 66B82000 	>>  mov $KERN_CS,%ax
  233 0190 C1E010   	>>  shl $16,%eax
- 233 0193 BAF00300 	>>  movl $exc1,%edx
+ 233 0193 BA100400 	>>  movl $exc1,%edx
  233      00
  233 0198 6689D0   	>>  mov %dx,%ax
  233 019b 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -652,7 +652,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 01aa 66B82000 	>>  mov $KERN_CS,%ax
  233 01ae C1E010   	>>  shl $16,%eax
- 233 01b1 BA100400 	>>  movl $exc2,%edx
+ 233 01b1 BA300400 	>>  movl $exc2,%edx
  233      00
  233 01b6 6689D0   	>>  mov %dx,%ax
  233 01b9 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -679,7 +679,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 01c8 66B82000 	>>  mov $KERN_CS,%ax
  233 01cc C1E010   	>>  shl $16,%eax
- 233 01cf BA300400 	>>  movl $exc3,%edx
+ 233 01cf BA500400 	>>  movl $exc3,%edx
  233      00
  233 01d4 6689D0   	>>  mov %dx,%ax
  233 01d7 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -703,7 +703,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 01e6 66B82000 	>>  mov $KERN_CS,%ax
  233 01ea C1E010   	>>  shl $16,%eax
- 233 01ed BA500400 	>>  movl $exc4,%edx
+ 233 01ed BA700400 	>>  movl $exc4,%edx
  233      00
  233 01f2 6689D0   	>>  mov %dx,%ax
  233 01f5 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -730,7 +730,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 0204 66B82000 	>>  mov $KERN_CS,%ax
  233 0208 C1E010   	>>  shl $16,%eax
- 233 020b BA700400 	>>  movl $exc5,%edx
+ 233 020b BA900400 	>>  movl $exc5,%edx
  233      00
  233 0210 6689D0   	>>  mov %dx,%ax
  233 0213 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -754,7 +754,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 0222 66B82000 	>>  mov $KERN_CS,%ax
  233 0226 C1E010   	>>  shl $16,%eax
- 233 0229 BA900400 	>>  movl $exc6,%edx
+ 233 0229 BAB00400 	>>  movl $exc6,%edx
  233      00
  233 022e 6689D0   	>>  mov %dx,%ax
  233 0231 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -781,7 +781,7 @@ GAS LISTING init.s 			page 1
 GAS LISTING init.s 			page 14
 
 
- 233 0247 BAB00400 	>>  movl $exc7,%edx
+ 233 0247 BAD00400 	>>  movl $exc7,%edx
  233      00
  233 024c 6689D0   	>>  mov %dx,%ax
  233 024f 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -805,7 +805,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 025e 66B82000 	>>  mov $KERN_CS,%ax
  233 0262 C1E010   	>>  shl $16,%eax
- 233 0265 BAD00400 	>>  movl $exc8,%edx
+ 233 0265 BAF00400 	>>  movl $exc8,%edx
  233      00
  233 026a 6689D0   	>>  mov %dx,%ax
  233 026d 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -829,7 +829,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 027c 66B82000 	>>  mov $KERN_CS,%ax
  233 0280 C1E010   	>>  shl $16,%eax
- 233 0283 BAF00400 	>>  movl $exc9,%edx
+ 233 0283 BA100500 	>>  movl $exc9,%edx
  233      00
  233 0288 6689D0   	>>  mov %dx,%ax
  233 028b 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -856,7 +856,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 029a 66B82000 	>>  mov $KERN_CS,%ax
  233 029e C1E010   	>>  shl $16,%eax
- 233 02a1 BA100500 	>>  movl $exc10,%edx
+ 233 02a1 BA300500 	>>  movl $exc10,%edx
  233      00
  233 02a6 6689D0   	>>  mov %dx,%ax
  233 02a9 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -880,7 +880,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 02b8 66B82000 	>>  mov $KERN_CS,%ax
  233 02bc C1E010   	>>  shl $16,%eax
- 233 02bf BA300500 	>>  movl $exc11,%edx
+ 233 02bf BA500500 	>>  movl $exc11,%edx
  233      00
  233 02c4 6689D0   	>>  mov %dx,%ax
  233 02c7 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -907,7 +907,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 02d6 66B82000 	>>  mov $KERN_CS,%ax
  233 02da C1E010   	>>  shl $16,%eax
- 233 02dd BA500500 	>>  movl $exc12,%edx
+ 233 02dd BA700500 	>>  movl $exc12,%edx
  233      00
  233 02e2 6689D0   	>>  mov %dx,%ax
  233 02e5 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -931,7 +931,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 02f4 66B82000 	>>  mov $KERN_CS,%ax
  233 02f8 C1E010   	>>  shl $16,%eax
- 233 02fb BA700500 	>>  movl $exc13,%edx
+ 233 02fb BA900500 	>>  movl $exc13,%edx
  233      00
  233 0300 6689D0   	>>  mov %dx,%ax
  233 0303 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -955,7 +955,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 0312 66B82000 	>>  mov $KERN_CS,%ax
  233 0316 C1E010   	>>  shl $16,%eax
- 233 0319 BA900500 	>>  movl $exc14,%edx
+ 233 0319 BAB00500 	>>  movl $exc14,%edx
  233      00
  233 031e 6689D0   	>>  mov %dx,%ax
 GAS LISTING init.s 			page 17
@@ -982,7 +982,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 0330 66B82000 	>>  mov $KERN_CS,%ax
  233 0334 C1E010   	>>  shl $16,%eax
- 233 0337 BAB00500 	>>  movl $exc16,%edx
+ 233 0337 BAD00500 	>>  movl $exc16,%edx
  233      00
  233 033c 6689D0   	>>  mov %dx,%ax
  233 033f 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -1006,7 +1006,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 034e 66B82000 	>>  mov $KERN_CS,%ax
  233 0352 C1E010   	>>  shl $16,%eax
- 233 0355 BAD00500 	>>  movl $exc17,%edx
+ 233 0355 BAF00500 	>>  movl $exc17,%edx
  233      00
  233 035a 6689D0   	>>  mov %dx,%ax
  233 035d 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -1033,7 +1033,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 036c 66B82000 	>>  mov $KERN_CS,%ax
  233 0370 C1E010   	>>  shl $16,%eax
- 233 0373 BAF00500 	>>  movl $exc18,%edx
+ 233 0373 BA100600 	>>  movl $exc18,%edx
  233      00
  233 0378 6689D0   	>>  mov %dx,%ax
  233 037b 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -1057,7 +1057,7 @@ GAS LISTING init.s 			page 1
  233              	>>  
  233 038a 66B82000 	>>  mov $KERN_CS,%ax
  233 038e C1E010   	>>  shl $16,%eax
- 233 0391 BA100600 	>>  movl $exc19,%edx
+ 233 0391 BA300600 	>>  movl $exc19,%edx
  233      00
  233 0396 6689D0   	>>  mov %dx,%ax
  233 0399 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
@@ -1092,7 +1092,7 @@ GAS LISTING init.s 			page 1
  243              	>  
  243 03a8 66B82000 	>  mov $KERN_CS,%ax
  243 03ac C1E010   	>  shl $16,%eax
- 243 03af BA620600 	>  movl $syscall,%edx
+ 243 03af BA820600 	>  movl $syscall,%edx
  243      00
  243 03b4 6689D0   	>  mov %dx,%ax
  243 03b7 66BA00EE 	>  mov $(0x8e00|(3<<13)|IDT_INTR),%dx
@@ -1100,68 +1100,69 @@ GAS LISTING init.s 			page 1
  243      00
  243 03c0 8915D414 	>  movl %edx,idt+(4+8*0x80)
  243      0000
- 244              	
- 245              		# Install the new IDT:
- 246 03c6 0F011DC8 		lidt	idtptr
- 246      100000
- 247 03cd C3       		ret
- 248              	
- 249              		#---------------------------------------------------------------------
- 250              		# Exception handlers:
- 251              	
- 252              		.text
- 253              		.macro	handler num, func, errorcode=0
- 254              		.align	16
- 255              	exc\num:
- 256              		.if	\errorcode==0
- 257              		subl	$4, %esp	# fake an error code if necessary
- 258              		.endif
- 259              		push	%gs		# Save segments
- 260              		push	%fs
- 261              		push	%es
- 262              		push	%ds
- 263              		pusha			# Save registers
- 264              		push	%esp		# push pointer to frame for handler
- 265              		movl	$\num, %eax
- 266              		call	\func
- 267              		addl	$4, %esp
- 268              		popl	%es
- 269              		popl	%ds
- 270              		popa
- 271              		addl	$4, %esp	# remove error code
- 272              		iret
- 273              		.endm
- 274              	
- 275              		# Protected-mode exceptions and interrupts:
- 276              		#
- 277              		handler	num=0,  func=nohandler			# divide error
- 277 03ce 6690     	>  .align 16
- 277              	> exc0:
- 277              	>  .if 0==0
+ 244              		idtcalc handler=yieldcall, slot=0x81, dpl=3	#create handler for $129 user call
+ 244              	>  
+ 244              	>  
+ 244              	>  
+ 244              	>  
+ 244              	>  
+ 244              	>  
+ 244              	>  
+ 244              	>  
+ 244              	>  
+ 244              	>  
+ 244              	>  
+ 244              	>  
+ 244 03c6 66B82000 	>  mov $KERN_CS,%ax
+ 244 03ca C1E010   	>  shl $16,%eax
+ 244 03cd BA970600 	>  movl $yieldcall,%edx
+ 244      00
+ 244 03d2 6689D0   	>  mov %dx,%ax
+ 244 03d5 66BA00EE 	>  mov $(0x8e00|(3<<13)|IDT_INTR),%dx
+ 244 03d9 A3D81400 	>  movl %eax,idt+( 8*0x81)
+ 244      00
+ 244 03de 8915DC14 	>  movl %edx,idt+(4+8*0x81)
+ 244      0000
+ 245              	
+ 246              		# Install the new IDT:
+ 247 03e4 0F011DC8 		lidt	idtptr
+ 247      100000
+ 248 03eb C3       		ret
+ 249              	
+ 250              		#---------------------------------------------------------------------
+ 251              		# Exception handlers:
+ 252              	
+ 253              		.text
+ 254              		.macro	handler num, func, errorcode=0
+ 255              		.align	16
+ 256              	exc\num:
+ 257              		.if	\errorcode==0
+ 258              		subl	$4, %esp	# fake an error code if necessary
 GAS LISTING init.s 			page 20
 
 
- 277 03d0 83EC04   	>  subl $4,%esp
- 277              	>  .endif
- 277 03d3 0FA8     	>  push %gs
- 277 03d5 0FA0     	>  push %fs
- 277 03d7 06       	>  push %es
- 277 03d8 1E       	>  push %ds
- 277 03d9 60       	>  pusha 
- 277 03da 54       	>  push %esp
- 277 03db B8000000 	>  movl $0,%eax
- 277      00
- 277 03e0 E84A0200 	>  call nohandler
- 277      00
- 277 03e5 83C404   	>  addl $4,%esp
- 277 03e8 07       	>  popl %es
- 277 03e9 1F       	>  popl %ds
- 277 03ea 61       	>  popa
- 277 03eb 83C404   	>  addl $4,%esp
- 277 03ee CF       	>  iret
- 278              		handler	num=1,  func=nohandler			# debug
- 278 03ef 90       	>  .align 16
- 278              	> exc1:
+ 259              		.endif
+ 260              		push	%gs		# Save segments
+ 261              		push	%fs
+ 262              		push	%es
+ 263              		push	%ds
+ 264              		pusha			# Save registers
+ 265              		push	%esp		# push pointer to frame for handler
+ 266              		movl	$\num, %eax
+ 267              		call	\func
+ 268              		addl	$4, %esp
+ 269              		popl	%es
+ 270              		popl	%ds
+ 271              		popa
+ 272              		addl	$4, %esp	# remove error code
+ 273              		iret
+ 274              		.endm
+ 275              	
+ 276              		# Protected-mode exceptions and interrupts:
+ 277              		#
+ 278              		handler	num=0,  func=nohandler			# divide error
+ 278 03ec 8D742600 	>  .align 16
+ 278              	> exc0:
  278              	>  .if 0==0
  278 03f0 83EC04   	>  subl $4,%esp
  278              	>  .endif
@@ -1171,9 +1172,9 @@ GAS LISTING init.s 			page 1
  278 03f8 1E       	>  push %ds
  278 03f9 60       	>  pusha 
  278 03fa 54       	>  push %esp
- 278 03fb B8010000 	>  movl $1,%eax
+ 278 03fb B8000000 	>  movl $0,%eax
  278      00
- 278 0400 E82A0200 	>  call nohandler
+ 278 0400 E84A0200 	>  call nohandler
  278      00
  278 0405 83C404   	>  addl $4,%esp
  278 0408 07       	>  popl %es
@@ -1181,9 +1182,9 @@ GAS LISTING init.s 			page 1
  278 040a 61       	>  popa
  278 040b 83C404   	>  addl $4,%esp
  278 040e CF       	>  iret
- 279              		handler	num=2,  func=nohandler			# NMI
+ 279              		handler	num=1,  func=nohandler			# debug
  279 040f 90       	>  .align 16
- 279              	> exc2:
+ 279              	> exc1:
  279              	>  .if 0==0
  279 0410 83EC04   	>  subl $4,%esp
  279              	>  .endif
@@ -1193,22 +1194,22 @@ GAS LISTING init.s 			page 1
  279 0418 1E       	>  push %ds
  279 0419 60       	>  pusha 
  279 041a 54       	>  push %esp
- 279 041b B8020000 	>  movl $2,%eax
+ 279 041b B8010000 	>  movl $1,%eax
  279      00
- 279 0420 E80A0200 	>  call nohandler
+ 279 0420 E82A0200 	>  call nohandler
  279      00
- 279 0425 83C404   	>  addl $4,%esp
 GAS LISTING init.s 			page 21
 
 
+ 279 0425 83C404   	>  addl $4,%esp
  279 0428 07       	>  popl %es
  279 0429 1F       	>  popl %ds
  279 042a 61       	>  popa
  279 042b 83C404   	>  addl $4,%esp
  279 042e CF       	>  iret
- 280              		handler	num=3,  func=nohandler			# breakpoint
+ 280              		handler	num=2,  func=nohandler			# NMI
  280 042f 90       	>  .align 16
- 280              	> exc3:
+ 280              	> exc2:
  280              	>  .if 0==0
  280 0430 83EC04   	>  subl $4,%esp
  280              	>  .endif
@@ -1218,9 +1219,9 @@ GAS LISTING init.s 			page 1
  280 0438 1E       	>  push %ds
  280 0439 60       	>  pusha 
  280 043a 54       	>  push %esp
- 280 043b B8030000 	>  movl $3,%eax
+ 280 043b B8020000 	>  movl $2,%eax
  280      00
- 280 0440 E8EA0100 	>  call nohandler
+ 280 0440 E80A0200 	>  call nohandler
  280      00
  280 0445 83C404   	>  addl $4,%esp
  280 0448 07       	>  popl %es
@@ -1228,9 +1229,9 @@ GAS LISTING init.s 			page 1
  280 044a 61       	>  popa
  280 044b 83C404   	>  addl $4,%esp
  280 044e CF       	>  iret
- 281              		handler	num=4,  func=nohandler			# overflow
+ 281              		handler	num=3,  func=nohandler			# breakpoint
  281 044f 90       	>  .align 16
- 281              	> exc4:
+ 281              	> exc3:
  281              	>  .if 0==0
  281 0450 83EC04   	>  subl $4,%esp
  281              	>  .endif
@@ -1240,9 +1241,9 @@ GAS LISTING init.s 			page 1
  281 0458 1E       	>  push %ds
  281 0459 60       	>  pusha 
  281 045a 54       	>  push %esp
- 281 045b B8040000 	>  movl $4,%eax
+ 281 045b B8030000 	>  movl $3,%eax
  281      00
- 281 0460 E8CA0100 	>  call nohandler
+ 281 0460 E8EA0100 	>  call nohandler
  281      00
  281 0465 83C404   	>  addl $4,%esp
  281 0468 07       	>  popl %es
@@ -1250,24 +1251,24 @@ GAS LISTING init.s 			page 1
  281 046a 61       	>  popa
  281 046b 83C404   	>  addl $4,%esp
  281 046e CF       	>  iret
- 282              		handler	num=5,  func=nohandler			# bound
+ 282              		handler	num=4,  func=nohandler			# overflow
  282 046f 90       	>  .align 16
- 282              	> exc5:
+ 282              	> exc4:
  282              	>  .if 0==0
  282 0470 83EC04   	>  subl $4,%esp
  282              	>  .endif
  282 0473 0FA8     	>  push %gs
- 282 0475 0FA0     	>  push %fs
 GAS LISTING init.s 			page 22
 
 
+ 282 0475 0FA0     	>  push %fs
  282 0477 06       	>  push %es
  282 0478 1E       	>  push %ds
  282 0479 60       	>  pusha 
  282 047a 54       	>  push %esp
- 282 047b B8050000 	>  movl $5,%eax
+ 282 047b B8040000 	>  movl $4,%eax
  282      00
- 282 0480 E8AA0100 	>  call nohandler
+ 282 0480 E8CA0100 	>  call nohandler
  282      00
  282 0485 83C404   	>  addl $4,%esp
  282 0488 07       	>  popl %es
@@ -1275,9 +1276,9 @@ GAS LISTING init.s 			page 1
  282 048a 61       	>  popa
  282 048b 83C404   	>  addl $4,%esp
  282 048e CF       	>  iret
- 283              		handler	num=6,  func=nohandler			# undefined opcode
+ 283              		handler	num=5,  func=nohandler			# bound
  283 048f 90       	>  .align 16
- 283              	> exc6:
+ 283              	> exc5:
  283              	>  .if 0==0
  283 0490 83EC04   	>  subl $4,%esp
  283              	>  .endif
@@ -1287,9 +1288,9 @@ GAS LISTING init.s 			page 1
  283 0498 1E       	>  push %ds
  283 0499 60       	>  pusha 
  283 049a 54       	>  push %esp
- 283 049b B8060000 	>  movl $6,%eax
+ 283 049b B8050000 	>  movl $5,%eax
  283      00
- 283 04a0 E88A0100 	>  call nohandler
+ 283 04a0 E8AA0100 	>  call nohandler
  283      00
  283 04a5 83C404   	>  addl $4,%esp
  283 04a8 07       	>  popl %es
@@ -1297,9 +1298,9 @@ GAS LISTING init.s 			page 1
  283 04aa 61       	>  popa
  283 04ab 83C404   	>  addl $4,%esp
  283 04ae CF       	>  iret
- 284              		handler	num=7,  func=nohandler			# nomath
+ 284              		handler	num=6,  func=nohandler			# undefined opcode
  284 04af 90       	>  .align 16
- 284              	> exc7:
+ 284              	> exc6:
  284              	>  .if 0==0
  284 04b0 83EC04   	>  subl $4,%esp
  284              	>  .endif
@@ -1309,91 +1310,91 @@ GAS LISTING init.s 			page 1
  284 04b8 1E       	>  push %ds
  284 04b9 60       	>  pusha 
  284 04ba 54       	>  push %esp
- 284 04bb B8070000 	>  movl $7,%eax
+ 284 04bb B8060000 	>  movl $6,%eax
  284      00
- 284 04c0 E86A0100 	>  call nohandler
+ 284 04c0 E88A0100 	>  call nohandler
  284      00
  284 04c5 83C404   	>  addl $4,%esp
  284 04c8 07       	>  popl %es
  284 04c9 1F       	>  popl %ds
  284 04ca 61       	>  popa
- 284 04cb 83C404   	>  addl $4,%esp
 GAS LISTING init.s 			page 23
 
 
+ 284 04cb 83C404   	>  addl $4,%esp
  284 04ce CF       	>  iret
- 285              		handler	num=8,  func=nohandler, errorcode=1	# doublefault
+ 285              		handler	num=7,  func=nohandler			# nomath
  285 04cf 90       	>  .align 16
- 285              	> exc8:
- 285              	>  .if 1==0
- 285              	>  subl $4,%esp
+ 285              	> exc7:
+ 285              	>  .if 0==0
+ 285 04d0 83EC04   	>  subl $4,%esp
  285              	>  .endif
- 285 04d0 0FA8     	>  push %gs
- 285 04d2 0FA0     	>  push %fs
- 285 04d4 06       	>  push %es
- 285 04d5 1E       	>  push %ds
- 285 04d6 60       	>  pusha 
- 285 04d7 54       	>  push %esp
- 285 04d8 B8080000 	>  movl $8,%eax
+ 285 04d3 0FA8     	>  push %gs
+ 285 04d5 0FA0     	>  push %fs
+ 285 04d7 06       	>  push %es
+ 285 04d8 1E       	>  push %ds
+ 285 04d9 60       	>  pusha 
+ 285 04da 54       	>  push %esp
+ 285 04db B8070000 	>  movl $7,%eax
  285      00
- 285 04dd E84D0100 	>  call nohandler
+ 285 04e0 E86A0100 	>  call nohandler
  285      00
- 285 04e2 83C404   	>  addl $4,%esp
- 285 04e5 07       	>  popl %es
- 285 04e6 1F       	>  popl %ds
- 285 04e7 61       	>  popa
- 285 04e8 83C404   	>  addl $4,%esp
- 285 04eb CF       	>  iret
- 286              		handler num=9,  func=nohandler			# coproc seg overrun
- 286 04ec 8D742600 	>  .align 16
- 286              	> exc9:
- 286              	>  .if 0==0
- 286 04f0 83EC04   	>  subl $4,%esp
+ 285 04e5 83C404   	>  addl $4,%esp
+ 285 04e8 07       	>  popl %es
+ 285 04e9 1F       	>  popl %ds
+ 285 04ea 61       	>  popa
+ 285 04eb 83C404   	>  addl $4,%esp
+ 285 04ee CF       	>  iret
+ 286              		handler	num=8,  func=nohandler, errorcode=1	# doublefault
+ 286 04ef 90       	>  .align 16
+ 286              	> exc8:
+ 286              	>  .if 1==0
+ 286              	>  subl $4,%esp
  286              	>  .endif
- 286 04f3 0FA8     	>  push %gs
- 286 04f5 0FA0     	>  push %fs
- 286 04f7 06       	>  push %es
- 286 04f8 1E       	>  push %ds
- 286 04f9 60       	>  pusha 
- 286 04fa 54       	>  push %esp
- 286 04fb B8090000 	>  movl $9,%eax
+ 286 04f0 0FA8     	>  push %gs
+ 286 04f2 0FA0     	>  push %fs
+ 286 04f4 06       	>  push %es
+ 286 04f5 1E       	>  push %ds
+ 286 04f6 60       	>  pusha 
+ 286 04f7 54       	>  push %esp
+ 286 04f8 B8080000 	>  movl $8,%eax
  286      00
- 286 0500 E82A0100 	>  call nohandler
+ 286 04fd E84D0100 	>  call nohandler
  286      00
- 286 0505 83C404   	>  addl $4,%esp
- 286 0508 07       	>  popl %es
- 286 0509 1F       	>  popl %ds
- 286 050a 61       	>  popa
- 286 050b 83C404   	>  addl $4,%esp
- 286 050e CF       	>  iret
- 287              		handler num=10, func=nohandler, errorcode=1	# invalid tss
- 287 050f 90       	>  .align 16
- 287              	> exc10:
- 287              	>  .if 1==0
- 287              	>  subl $4,%esp
+ 286 0502 83C404   	>  addl $4,%esp
+ 286 0505 07       	>  popl %es
+ 286 0506 1F       	>  popl %ds
+ 286 0507 61       	>  popa
+ 286 0508 83C404   	>  addl $4,%esp
+ 286 050b CF       	>  iret
+ 287              		handler num=9,  func=nohandler			# coproc seg overrun
+ 287 050c 8D742600 	>  .align 16
+ 287              	> exc9:
+ 287              	>  .if 0==0
+ 287 0510 83EC04   	>  subl $4,%esp
  287              	>  .endif
- 287 0510 0FA8     	>  push %gs
- 287 0512 0FA0     	>  push %fs
- 287 0514 06       	>  push %es
- 287 0515 1E       	>  push %ds
- 287 0516 60       	>  pusha 
- 287 0517 54       	>  push %esp
+ 287 0513 0FA8     	>  push %gs
+ 287 0515 0FA0     	>  push %fs
+ 287 0517 06       	>  push %es
+ 287 0518 1E       	>  push %ds
+ 287 0519 60       	>  pusha 
 GAS LISTING init.s 			page 24
 
 
- 287 0518 B80A0000 	>  movl $10,%eax
+ 287 051a 54       	>  push %esp
+ 287 051b B8090000 	>  movl $9,%eax
  287      00
- 287 051d E80D0100 	>  call nohandler
+ 287 0520 E82A0100 	>  call nohandler
  287      00
- 287 0522 83C404   	>  addl $4,%esp
- 287 0525 07       	>  popl %es
- 287 0526 1F       	>  popl %ds
- 287 0527 61       	>  popa
- 287 0528 83C404   	>  addl $4,%esp
- 287 052b CF       	>  iret
- 288              		handler num=11, func=nohandler, errorcode=1	# segment not present
- 288 052c 8D742600 	>  .align 16
- 288              	> exc11:
+ 287 0525 83C404   	>  addl $4,%esp
+ 287 0528 07       	>  popl %es
+ 287 0529 1F       	>  popl %ds
+ 287 052a 61       	>  popa
+ 287 052b 83C404   	>  addl $4,%esp
+ 287 052e CF       	>  iret
+ 288              		handler num=10, func=nohandler, errorcode=1	# invalid tss
+ 288 052f 90       	>  .align 16
+ 288              	> exc10:
  288              	>  .if 1==0
  288              	>  subl $4,%esp
  288              	>  .endif
@@ -1403,9 +1404,9 @@ GAS LISTING init.s 			page 1
  288 0535 1E       	>  push %ds
  288 0536 60       	>  pusha 
  288 0537 54       	>  push %esp
- 288 0538 B80B0000 	>  movl $11,%eax
+ 288 0538 B80A0000 	>  movl $10,%eax
  288      00
- 288 053d E8ED0000 	>  call nohandler
+ 288 053d E80D0100 	>  call nohandler
  288      00
  288 0542 83C404   	>  addl $4,%esp
  288 0545 07       	>  popl %es
@@ -1413,9 +1414,9 @@ GAS LISTING init.s 			page 1
  288 0547 61       	>  popa
  288 0548 83C404   	>  addl $4,%esp
  288 054b CF       	>  iret
- 289              		handler num=12, func=nohandler, errorcode=1	# stack-segment fault
+ 289              		handler num=11, func=nohandler, errorcode=1	# segment not present
  289 054c 8D742600 	>  .align 16
- 289              	> exc12:
+ 289              	> exc11:
  289              	>  .if 1==0
  289              	>  subl $4,%esp
  289              	>  .endif
@@ -1425,9 +1426,9 @@ GAS LISTING init.s 			page 1
  289 0555 1E       	>  push %ds
  289 0556 60       	>  pusha 
  289 0557 54       	>  push %esp
- 289 0558 B80C0000 	>  movl $12,%eax
+ 289 0558 B80B0000 	>  movl $11,%eax
  289      00
- 289 055d E8CD0000 	>  call nohandler
+ 289 055d E8ED0000 	>  call nohandler
  289      00
  289 0562 83C404   	>  addl $4,%esp
  289 0565 07       	>  popl %es
@@ -1435,12 +1436,12 @@ GAS LISTING init.s 			page 1
  289 0567 61       	>  popa
  289 0568 83C404   	>  addl $4,%esp
  289 056b CF       	>  iret
- 290              		handler num=13, func=nohandler, errorcode=1	# general protection
+ 290              		handler num=12, func=nohandler, errorcode=1	# stack-segment fault
  290 056c 8D742600 	>  .align 16
- 290              	> exc13:
 GAS LISTING init.s 			page 25
 
 
+ 290              	> exc12:
  290              	>  .if 1==0
  290              	>  subl $4,%esp
  290              	>  .endif
@@ -1450,9 +1451,9 @@ GAS LISTING init.s 			page 1
  290 0575 1E       	>  push %ds
  290 0576 60       	>  pusha 
  290 0577 54       	>  push %esp
- 290 0578 B80D0000 	>  movl $13,%eax
+ 290 0578 B80C0000 	>  movl $12,%eax
  290      00
- 290 057d E8AD0000 	>  call nohandler
+ 290 057d E8CD0000 	>  call nohandler
  290      00
  290 0582 83C404   	>  addl $4,%esp
  290 0585 07       	>  popl %es
@@ -1460,9 +1461,9 @@ GAS LISTING init.s 			page 1
  290 0587 61       	>  popa
  290 0588 83C404   	>  addl $4,%esp
  290 058b CF       	>  iret
- 291              		handler num=14, func=nohandler, errorcode=1	# page fault
+ 291              		handler num=13, func=nohandler, errorcode=1	# general protection
  291 058c 8D742600 	>  .align 16
- 291              	> exc14:
+ 291              	> exc13:
  291              	>  .if 1==0
  291              	>  subl $4,%esp
  291              	>  .endif
@@ -1472,9 +1473,9 @@ GAS LISTING init.s 			page 1
  291 0595 1E       	>  push %ds
  291 0596 60       	>  pusha 
  291 0597 54       	>  push %esp
- 291 0598 B80E0000 	>  movl $14,%eax
+ 291 0598 B80D0000 	>  movl $13,%eax
  291      00
- 291 059d E88D0000 	>  call nohandler
+ 291 059d E8AD0000 	>  call nohandler
  291      00
  291 05a2 83C404   	>  addl $4,%esp
  291 05a5 07       	>  popl %es
@@ -1482,93 +1483,93 @@ GAS LISTING init.s 			page 1
  291 05a7 61       	>  popa
  291 05a8 83C404   	>  addl $4,%esp
  291 05ab CF       	>  iret
- 292              		handler num=16, func=nohandler			# math fault
+ 292              		handler num=14, func=nohandler, errorcode=1	# page fault
  292 05ac 8D742600 	>  .align 16
- 292              	> exc16:
- 292              	>  .if 0==0
- 292 05b0 83EC04   	>  subl $4,%esp
+ 292              	> exc14:
+ 292              	>  .if 1==0
+ 292              	>  subl $4,%esp
  292              	>  .endif
- 292 05b3 0FA8     	>  push %gs
- 292 05b5 0FA0     	>  push %fs
- 292 05b7 06       	>  push %es
- 292 05b8 1E       	>  push %ds
- 292 05b9 60       	>  pusha 
- 292 05ba 54       	>  push %esp
- 292 05bb B8100000 	>  movl $16,%eax
+ 292 05b0 0FA8     	>  push %gs
+ 292 05b2 0FA0     	>  push %fs
+ 292 05b4 06       	>  push %es
+ 292 05b5 1E       	>  push %ds
+ 292 05b6 60       	>  pusha 
+ 292 05b7 54       	>  push %esp
+ 292 05b8 B80E0000 	>  movl $14,%eax
  292      00
- 292 05c0 E86A0000 	>  call nohandler
- 292      00
+ 292 05bd E88D0000 	>  call nohandler
 GAS LISTING init.s 			page 26
 
 
- 292 05c5 83C404   	>  addl $4,%esp
- 292 05c8 07       	>  popl %es
- 292 05c9 1F       	>  popl %ds
- 292 05ca 61       	>  popa
- 292 05cb 83C404   	>  addl $4,%esp
- 292 05ce CF       	>  iret
- 293              		handler num=17, func=nohandler, errorcode=1	# alignment check
- 293 05cf 90       	>  .align 16
- 293              	> exc17:
- 293              	>  .if 1==0
- 293              	>  subl $4,%esp
+ 292      00
+ 292 05c2 83C404   	>  addl $4,%esp
+ 292 05c5 07       	>  popl %es
+ 292 05c6 1F       	>  popl %ds
+ 292 05c7 61       	>  popa
+ 292 05c8 83C404   	>  addl $4,%esp
+ 292 05cb CF       	>  iret
+ 293              		handler num=16, func=nohandler			# math fault
+ 293 05cc 8D742600 	>  .align 16
+ 293              	> exc16:
+ 293              	>  .if 0==0
+ 293 05d0 83EC04   	>  subl $4,%esp
  293              	>  .endif
- 293 05d0 0FA8     	>  push %gs
- 293 05d2 0FA0     	>  push %fs
- 293 05d4 06       	>  push %es
- 293 05d5 1E       	>  push %ds
- 293 05d6 60       	>  pusha 
- 293 05d7 54       	>  push %esp
- 293 05d8 B8110000 	>  movl $17,%eax
+ 293 05d3 0FA8     	>  push %gs
+ 293 05d5 0FA0     	>  push %fs
+ 293 05d7 06       	>  push %es
+ 293 05d8 1E       	>  push %ds
+ 293 05d9 60       	>  pusha 
+ 293 05da 54       	>  push %esp
+ 293 05db B8100000 	>  movl $16,%eax
  293      00
- 293 05dd E84D0000 	>  call nohandler
+ 293 05e0 E86A0000 	>  call nohandler
  293      00
- 293 05e2 83C404   	>  addl $4,%esp
- 293 05e5 07       	>  popl %es
- 293 05e6 1F       	>  popl %ds
- 293 05e7 61       	>  popa
- 293 05e8 83C404   	>  addl $4,%esp
- 293 05eb CF       	>  iret
- 294              		handler num=18, func=nohandler			# machine check
- 294 05ec 8D742600 	>  .align 16
- 294              	> exc18:
- 294              	>  .if 0==0
- 294 05f0 83EC04   	>  subl $4,%esp
+ 293 05e5 83C404   	>  addl $4,%esp
+ 293 05e8 07       	>  popl %es
+ 293 05e9 1F       	>  popl %ds
+ 293 05ea 61       	>  popa
+ 293 05eb 83C404   	>  addl $4,%esp
+ 293 05ee CF       	>  iret
+ 294              		handler num=17, func=nohandler, errorcode=1	# alignment check
+ 294 05ef 90       	>  .align 16
+ 294              	> exc17:
+ 294              	>  .if 1==0
+ 294              	>  subl $4,%esp
  294              	>  .endif
- 294 05f3 0FA8     	>  push %gs
- 294 05f5 0FA0     	>  push %fs
- 294 05f7 06       	>  push %es
- 294 05f8 1E       	>  push %ds
- 294 05f9 60       	>  pusha 
- 294 05fa 54       	>  push %esp
- 294 05fb B8120000 	>  movl $18,%eax
+ 294 05f0 0FA8     	>  push %gs
+ 294 05f2 0FA0     	>  push %fs
+ 294 05f4 06       	>  push %es
+ 294 05f5 1E       	>  push %ds
+ 294 05f6 60       	>  pusha 
+ 294 05f7 54       	>  push %esp
+ 294 05f8 B8110000 	>  movl $17,%eax
  294      00
- 294 0600 E82A0000 	>  call nohandler
+ 294 05fd E84D0000 	>  call nohandler
  294      00
- 294 0605 83C404   	>  addl $4,%esp
- 294 0608 07       	>  popl %es
- 294 0609 1F       	>  popl %ds
- 294 060a 61       	>  popa
- 294 060b 83C404   	>  addl $4,%esp
- 294 060e CF       	>  iret
- 295              		handler num=19, func=nohandler			# SIMD fp exception
- 295 060f 90       	>  .align 16
- 295              	> exc19:
+ 294 0602 83C404   	>  addl $4,%esp
+ 294 0605 07       	>  popl %es
+ 294 0606 1F       	>  popl %ds
+ 294 0607 61       	>  popa
+ 294 0608 83C404   	>  addl $4,%esp
+ 294 060b CF       	>  iret
+ 295              		handler num=18, func=nohandler			# machine check
+ 295 060c 8D742600 	>  .align 16
+ 295              	> exc18:
  295              	>  .if 0==0
  295 0610 83EC04   	>  subl $4,%esp
  295              	>  .endif
- 295 0613 0FA8     	>  push %gs
 GAS LISTING init.s 			page 27
 
 
+ 295 0613 0FA8     	>  push %gs
  295 0615 0FA0     	>  push %fs
  295 0617 06       	>  push %es
  295 0618 1E       	>  push %ds
  295 0619 60       	>  pusha 
  295 061a 54       	>  push %esp
- 295 061b B8130000 	>  movl $19,%eax
+ 295 061b B8120000 	>  movl $18,%eax
  295      00
- 295 0620 E80A0000 	>  call nohandler
+ 295 0620 E82A0000 	>  call nohandler
  295      00
  295 0625 83C404   	>  addl $4,%esp
  295 0628 07       	>  popl %es
@@ -1576,75 +1577,118 @@ GAS LISTING init.s 			page 1
  295 062a 61       	>  popa
  295 062b 83C404   	>  addl $4,%esp
  295 062e CF       	>  iret
- 296              	
- 297              	nohandler:			# dummy interrupt handler
- 298 062f 8B5C2404 		movl	4(%esp), %ebx	# get frame pointer
- 299 0633 53       		pushl	%ebx
- 300 0634 50       		pushl	%eax
- 301 0635 68460600 		pushl	$excepted
- 301      00
- 302 063a E8FCFFFF 		call	printf
- 302      FF
- 303 063f 83C40C   		addl	$12, %esp
- 304              	
- 305 0642 F4       	1:	hlt
- 306 0643 EBFD     		jmp 1b
- 307              	
- 308 0645 C3       		ret
- 309              	excepted:
- 310 0646 45786365 		.asciz	"Exception 0x%x, frame=0x%x\n"
- 310      7074696F 
- 310      6E203078 
- 310      25782C20 
- 310      6672616D 
- 311              	
- 312              	#--------------------------------------------------------------------------
- 313              	# Simple system call handler:
- 314              	#--------------------------------------------------------------------------
- 315              	
- 316              		.text
- 317 0662 83EC04   	syscall:subl	$4, %esp	# Fake an error code
- 318 0665 0FA8     		push	%gs		# Save segments
- 319 0667 0FA0     		push	%fs
- 320 0669 06       		push	%es
- 321 066a 1E       		push	%ds
- 322 066b 60       		pusha			# Save registers
- 323 066c 8D250010 		leal	stack, %esp	# Switch to kernel stack
- 323      0000
- 324 0672 E9FCFFFF 		jmp	csyscall
- 324      FF
- 325              	
- 326              	#--------------------------------------------------------------------------
- 327              	# Switch to user mode:  Takes a single parameter, which provides the
- 328              	# initial context for the user process.
- 329              	#
+ 296              		handler num=19, func=nohandler			# SIMD fp exception
+ 296 062f 90       	>  .align 16
+ 296              	> exc19:
+ 296              	>  .if 0==0
+ 296 0630 83EC04   	>  subl $4,%esp
+ 296              	>  .endif
+ 296 0633 0FA8     	>  push %gs
+ 296 0635 0FA0     	>  push %fs
+ 296 0637 06       	>  push %es
+ 296 0638 1E       	>  push %ds
+ 296 0639 60       	>  pusha 
+ 296 063a 54       	>  push %esp
+ 296 063b B8130000 	>  movl $19,%eax
+ 296      00
+ 296 0640 E80A0000 	>  call nohandler
+ 296      00
+ 296 0645 83C404   	>  addl $4,%esp
+ 296 0648 07       	>  popl %es
+ 296 0649 1F       	>  popl %ds
+ 296 064a 61       	>  popa
+ 296 064b 83C404   	>  addl $4,%esp
+ 296 064e CF       	>  iret
+ 297              	
+ 298              	nohandler:			# dummy interrupt handler
+ 299 064f 8B5C2404 		movl	4(%esp), %ebx	# get frame pointer
+ 300 0653 53       		pushl	%ebx
+ 301 0654 50       		pushl	%eax
+ 302 0655 68660600 		pushl	$excepted
+ 302      00
+ 303 065a E8FCFFFF 		call	printf
+ 303      FF
+ 304 065f 83C40C   		addl	$12, %esp
+ 305              	
+ 306 0662 F4       	1:	hlt
+ 307 0663 EBFD     		jmp 1b
+ 308              	
+ 309 0665 C3       		ret
+ 310              	excepted:
+ 311 0666 45786365 		.asciz	"Exception 0x%x, frame=0x%x\n"
+ 311      7074696F 
+ 311      6E203078 
 GAS LISTING init.s 			page 28
 
 
- 330              	# Size of context is 4 * (8 + 4 + 6) = 4*18 = 72
- 331              	# - 8 general registers: edi, esi, ebp, esp, ebx, edx, ecx, eax
- 332              	# - 4 segment registers: ds, es, fs, gs
- 333              	# - 6 interrupt frame words: errorcode, eip, cs, eflags, esp, ss
- 334              	#--------------------------------------------------------------------------
- 335              	
- 336              		.set	CONTEXT_SIZE, 72
- 337              		.globl	switchToUser
- 338              	switchToUser:
- 339 0677 8B442404 		movl	4(%esp), %eax	# Load address of the user context
- 340 067b 89C4     		movl	%eax, %esp	# Reset stack to base of user context
- 341 067d 83C048   		addl	$CONTEXT_SIZE, %eax
- 342 0680 A3041000 		movl	%eax, esp0	# Set stack address for kernel reentry
- 342      00
- 343 0685 61       		popa			# Restore registers
- 344 0686 1F       		pop	%ds		# Restore segments
- 345 0687 07       		pop	%es
- 346 0688 0FA1     		pop	%fs
- 347 068a 0FA9     		pop	%gs
- 348 068c 83C404   		addl	$4, %esp	# Skip error code
- 349 068f CF       		iret			# Return from interrupt
- 350              	
- 351              	#-- Done ---------------------------------------------------------------------
+ 311      25782C20 
+ 311      6672616D 
+ 312              	
+ 313              	#--------------------------------------------------------------------------
+ 314              	# Simple system call handler:
+ 315              	#--------------------------------------------------------------------------
+ 316              	
+ 317              		.text
+ 318 0682 83EC04   	syscall:subl	$4, %esp	# Fake an error code
+ 319 0685 0FA8     		push	%gs		# Save segments
+ 320 0687 0FA0     		push	%fs
+ 321 0689 06       		push	%es
+ 322 068a 1E       		push	%ds
+ 323 068b 60       		pusha			# Save registers
+ 324 068c 8D250010 		leal	stack, %esp	# Switch to kernel stack
+ 324      0000
+ 325 0692 E9FCFFFF 		jmp	csyscall
+ 325      FF
+ 326              	
+ 327              	#--------------------------------------------------------------------------
+ 328              	# Simple yield system call handler:
+ 329              	#--------------------------------------------------------------------------
+ 330              		.text
+ 331              	yieldcall:
+ 332 0697 83EC04   		subl	$4, %esp
+ 333 069a 0FA8     		push	%gs
+ 334 069c 0FA0     		push	%fs
+ 335 069e 06       		push	%es
+ 336 069f 1E       		push	%ds
+ 337 06a0 60       		pusha
+ 338 06a1 8D250010 		leal	stack, %esp
+ 338      0000
+ 339 06a7 E9FCFFFF 		jmp	yieldimp
+ 339      FF
+ 340              	#1:	hlt
+ 341              	#	jmp	1b	
+ 342              	
+ 343              	#--------------------------------------------------------------------------
+ 344              	# Switch to user mode:  Takes a single parameter, which provides the
+ 345              	# initial context for the user process.
+ 346              	#
+ 347              	# Size of context is 4 * (8 + 4 + 6) = 4*18 = 72
+ 348              	# - 8 general registers: edi, esi, ebp, esp, ebx, edx, ecx, eax
+ 349              	# - 4 segment registers: ds, es, fs, gs
+ 350              	# - 6 interrupt frame words: errorcode, eip, cs, eflags, esp, ss
+ 351              	#--------------------------------------------------------------------------
+ 352              	
+ 353              		.set	CONTEXT_SIZE, 72
+ 354              		.globl	switchToUser
+ 355              	switchToUser:
+ 356 06ac 8B442404 		movl	4(%esp), %eax	# Load address of the user context
+ 357 06b0 89C4     		movl	%eax, %esp	# Reset stack to base of user context
+ 358 06b2 83C048   		addl	$CONTEXT_SIZE, %eax
+ 359 06b5 A3041000 		movl	%eax, esp0	# Set stack address for kernel reentry
+ 359      00
+ 360 06ba 61       		popa			# Restore registers
+ 361 06bb 1F       		pop	%ds		# Restore segments
 GAS LISTING init.s 			page 29
+
+
+ 362 06bc 07       		pop	%es
+ 363 06bd 0FA1     		pop	%fs
+ 364 06bf 0FA9     		pop	%gs
+ 365 06c1 83C404   		addl	$4, %esp	# Skip error code
+ 366 06c4 CF       		iret			# Return from interrupt
+ 367              	
+ 368              	#-- Done ---------------------------------------------------------------------
+GAS LISTING init.s 			page 30
 
 
 DEFINED SYMBOLS
@@ -1674,32 +1718,37 @@ DEFINED SYMBOLS
               init.s:200    *ABS*:0000000000000100 IDT_TRAP
               init.s:204    .data:00000000000010c8 idtptr
               init.s:207    .data:00000000000010d0 idt
-              init.s:277    .text:00000000000003d0 exc0
-              init.s:278    .text:00000000000003f0 exc1
-              init.s:279    .text:0000000000000410 exc2
-              init.s:280    .text:0000000000000430 exc3
-              init.s:281    .text:0000000000000450 exc4
-              init.s:282    .text:0000000000000470 exc5
-              init.s:283    .text:0000000000000490 exc6
-              init.s:284    .text:00000000000004b0 exc7
-              init.s:285    .text:00000000000004d0 exc8
-              init.s:286    .text:00000000000004f0 exc9
-              init.s:287    .text:0000000000000510 exc10
-              init.s:288    .text:0000000000000530 exc11
-              init.s:289    .text:0000000000000550 exc12
-              init.s:290    .text:0000000000000570 exc13
-              init.s:291    .text:0000000000000590 exc14
-              init.s:292    .text:00000000000005b0 exc16
-              init.s:293    .text:00000000000005d0 exc17
-              init.s:294    .text:00000000000005f0 exc18
-              init.s:295    .text:0000000000000610 exc19
-              init.s:317    .text:0000000000000662 syscall
-              init.s:297    .text:000000000000062f nohandler
-              init.s:309    .text:0000000000000646 excepted
-              init.s:336    *ABS*:0000000000000048 CONTEXT_SIZE
-              init.s:338    .text:0000000000000677 switchToUser
+              init.s:278    .text:00000000000003f0 exc0
+              init.s:279    .text:0000000000000410 exc1
+              init.s:280    .text:0000000000000430 exc2
+              init.s:281    .text:0000000000000450 exc3
+              init.s:282    .text:0000000000000470 exc4
+              init.s:283    .text:0000000000000490 exc5
+              init.s:284    .text:00000000000004b0 exc6
+              init.s:285    .text:00000000000004d0 exc7
+              init.s:286    .text:00000000000004f0 exc8
+              init.s:287    .text:0000000000000510 exc9
+              init.s:288    .text:0000000000000530 exc10
+              init.s:289    .text:0000000000000550 exc11
+              init.s:290    .text:0000000000000570 exc12
+              init.s:291    .text:0000000000000590 exc13
+              init.s:292    .text:00000000000005b0 exc14
+              init.s:293    .text:00000000000005d0 exc16
+              init.s:294    .text:00000000000005f0 exc17
+              init.s:295    .text:0000000000000610 exc18
+              init.s:296    .text:0000000000000630 exc19
+              init.s:318    .text:0000000000000682 syscall
+              init.s:331    .text:0000000000000697 yieldcall
+              init.s:298    .text:000000000000064f nohandler
+              init.s:310    .text:0000000000000666 excepted
+              init.s:353    *ABS*:0000000000000048 CONTEXT_SIZE
+              init.s:355    .text:00000000000006ac switchToUser
 
 UNDEFINED SYMBOLS
 kernel
 printf
 csyscall
+GAS LISTING init.s 			page 31
+
+
+yieldimp

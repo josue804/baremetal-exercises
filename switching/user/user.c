@@ -13,7 +13,7 @@ void kputs(char* s) {
 
 void cmain() {
   int i;
-  setWindow(2, 22, 50, 30);   // user process on right hand side
+  setWindow(1, 11, 47, 32);   // user process on right hand side
   cls();
   puts("in user code\n");
   for (i=0; i<4; i++) {
@@ -21,8 +21,6 @@ void cmain() {
     puts("hello, user console\n");
   }
   puts("\n\nUser code does not return\n");
-  for (;;) { /* Don't return! */
-    yield(); //calls user yield function
-  }
+//  yield(); //calls user yield function
   puts("This message won't appear!\n");
 }

@@ -23,29 +23,30 @@ Linker script and memory map
                 0x0000000000100000                _text_start = .
  *(.multiboot)
  *(.text)
- .text          0x0000000000100000      0x690 init.o
+ .text          0x0000000000100000      0x6c5 init.o
                 0x0000000000100000                entry
-                0x0000000000100677                switchToUser
- .text          0x0000000000100690      0x207 kernel.o
-                0x0000000000100690                initContext
-                0x0000000000100704                kernel
-                0x0000000000100877                csyscall
- *fill*         0x0000000000100897        0x9 
- .text          0x00000000001008a0      0x471 ../../simpleio/libio.a(simpleio.o)
-                0x0000000000100944                setVideo
-                0x000000000010094e                setWindow
-                0x000000000010099c                setAttr
-                0x00000000001009a6                cls
-                0x0000000000100a29                putchar
-                0x0000000000100b59                puts
-                0x0000000000100b82                printf
- .text          0x0000000000100d11       0x2b ../../simpleio/libio.a(serial.o)
-                0x0000000000100d11                serial_putc
-                0x0000000000100d3c                _text_end = .
+                0x00000000001006ac                switchToUser
+ .text          0x00000000001006c5      0x237 kernel.o
+                0x00000000001006c5                initContext
+                0x0000000000100739                kernel
+                0x00000000001008bd                csyscall
+                0x00000000001008dd                yieldimp
+ *fill*         0x00000000001008fc        0x4 
+ .text          0x0000000000100900      0x471 ../../simpleio/libio.a(simpleio.o)
+                0x00000000001009a4                setVideo
+                0x00000000001009ae                setWindow
+                0x00000000001009fc                setAttr
+                0x0000000000100a06                cls
+                0x0000000000100a89                putchar
+                0x0000000000100bb9                puts
+                0x0000000000100be2                printf
+ .text          0x0000000000100d71       0x2b ../../simpleio/libio.a(serial.o)
+                0x0000000000100d71                serial_putc
+                0x0000000000100d9c                _text_end = .
  *(.rodata)
- .rodata        0x0000000000100d3c       0x58 ../../simpleio/libio.a(simpleio.o)
+ .rodata        0x0000000000100d9c       0x58 ../../simpleio/libio.a(simpleio.o)
  *(.data)
- *fill*         0x0000000000100d94       0x6c 
+ *fill*         0x0000000000100df4        0xc 
  .data          0x0000000000100e00     0x18d0 init.o
  .data          0x00000000001026d0        0x0 kernel.o
  .data          0x00000000001026d0       0x10 ../../simpleio/libio.a(simpleio.o)
@@ -71,19 +72,19 @@ Linker script and memory map
  .rel.iplt      0x0000000000000000        0x0 init.o
  .rel.text      0x0000000000000000        0x0 init.o
 
-.rodata.str1.1  0x0000000000102738       0xdb
+.rodata.str1.1  0x0000000000102738       0xe8
  .rodata.str1.1
-                0x0000000000102738       0xd4 kernel.o
+                0x0000000000102738       0xe1 kernel.o
  .rodata.str1.1
-                0x000000000010280c        0x7 ../../simpleio/libio.a(simpleio.o)
+                0x0000000000102819        0x7 ../../simpleio/libio.a(simpleio.o)
 
-.rodata.str1.4  0x0000000000102814       0x40
+.rodata.str1.4  0x0000000000102820       0x40
  .rodata.str1.4
-                0x0000000000102814       0x40 kernel.o
+                0x0000000000102820       0x40 kernel.o
 
-.eh_frame       0x0000000000102854      0x1e8
- .eh_frame      0x0000000000102854       0x94 kernel.o
- .eh_frame      0x00000000001028e8      0x154 ../../simpleio/libio.a(simpleio.o)
+.eh_frame       0x0000000000102860      0x200
+ .eh_frame      0x0000000000102860       0xac kernel.o
+ .eh_frame      0x000000000010290c      0x154 ../../simpleio/libio.a(simpleio.o)
                                         0x16c (size before relaxing)
 
 .init
