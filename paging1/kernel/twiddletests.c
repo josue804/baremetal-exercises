@@ -19,6 +19,7 @@ void test(unsigned val) {
     printf("firstPageAfter(0x%x) = 0x%x\n", val, firstPageAfter(val));
     printf("endPageBefore(0x%x)  = 0x%x\n", val, endPageBefore(val));
     printf("pageEnd(0x%x)        = 0x%x\n", val, pageEnd(val));
+    printf("pageNext(0x%x)       = 0x%x\n", val, pageNext(val));
 }
 
 int main(int argc, char** argv) {

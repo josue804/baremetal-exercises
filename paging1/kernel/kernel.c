@@ -1,6 +1,6 @@
 /*-------------------------------------------------------------------------
  * kernel.c:
- * Mark P Jones + YOUR NAME HERE, Portland State University
+ * Mark P Jones + Josue Valverde, Portland State University
  *-----------------------------------------------------------------------*/
 #include "simpleio.h"
 #include "mimguser.h"

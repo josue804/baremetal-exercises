@@ -1,0 +1,98 @@
+Archive member included to satisfy reference by file (symbol)
+
+../../simpleio/libio.a(simpleio.o)
+                              kernel.o (cls)
+../../simpleio/libio.a(serial.o)
+                              ../../simpleio/libio.a(simpleio.o) (serial_putc)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+                0x0000000000100000                . = 0x100000
+
+.text           0x0000000000100000     0x1868
+                0x0000000000100000                _text_start = .
+ *(.multiboot)
+ *(.text)
+ .text          0x0000000000100000      0x169 init.o
+                0x0000000000100000                entry
+ .text          0x0000000000100169      0x103 kernel.o
+                0x0000000000100169                kernel
+ *fill*         0x000000000010026c        0x4 
+ .text          0x0000000000100270      0x471 ../../simpleio/libio.a(simpleio.o)
+                0x0000000000100314                setVideo
+                0x000000000010031e                setWindow
+                0x000000000010036c                setAttr
+                0x0000000000100376                cls
+                0x00000000001003f9                putchar
+                0x0000000000100529                puts
+                0x0000000000100552                printf
+ .text          0x00000000001006e1       0x2b ../../simpleio/libio.a(serial.o)
+                0x00000000001006e1                serial_putc
+                0x000000000010070c                _text_end = .
+ *(.rodata)
+ .rodata        0x000000000010070c       0x58 ../../simpleio/libio.a(simpleio.o)
+ *(.data)
+ *fill*         0x0000000000100764       0x1c 
+ .data          0x0000000000100780     0x10c6 init.o
+ .data          0x0000000000101846        0x0 kernel.o
+ *fill*         0x0000000000101846        0x2 
+ .data          0x0000000000101848       0x10 ../../simpleio/libio.a(simpleio.o)
+ .data          0x0000000000101858        0x0 ../../simpleio/libio.a(serial.o)
+                0x0000000000101858                _start_bss = .
+ *(COMMON)
+ *(.bss)
+ .bss           0x0000000000101858        0x0 init.o
+ .bss           0x0000000000101858        0x0 kernel.o
+ .bss           0x0000000000101858       0x10 ../../simpleio/libio.a(simpleio.o)
+ .bss           0x0000000000101868        0x0 ../../simpleio/libio.a(serial.o)
+                0x0000000000101868                _end_bss = .
+
+.iplt           0x0000000000101870        0x0
+ .iplt          0x0000000000000000        0x0 init.o
+
+.igot.plt       0x0000000000101868        0x0
+ .igot.plt      0x0000000000000000        0x0 init.o
+
+.rel.dyn        0x0000000000101868        0x0
+ .rel.iplt      0x0000000000000000        0x0 init.o
+ .rel.text      0x0000000000000000        0x0 init.o
+
+.rodata.str1.4  0x0000000000101868       0x6c
+ .rodata.str1.4
+                0x0000000000101868       0x6c kernel.o
+                                         0x6b (size before relaxing)
+
+.rodata.str1.1  0x00000000001018d4       0x62
+ .rodata.str1.1
+                0x00000000001018d4       0x5b kernel.o
+ .rodata.str1.1
+                0x000000000010192f        0x7 ../../simpleio/libio.a(simpleio.o)
+
+.eh_frame       0x0000000000101938      0x1a8
+ .eh_frame      0x0000000000101938       0x54 kernel.o
+ .eh_frame      0x000000000010198c      0x154 ../../simpleio/libio.a(simpleio.o)
+                                        0x16c (size before relaxing)
+
+.init
+ *(.initdata)
+LOAD init.o
+LOAD kernel.o
+LOAD ../../simpleio/libio.a
+OUTPUT(kernel elf32-i386)
+
+.comment        0x0000000000000000       0x2b
+ .comment       0x0000000000000000       0x2b kernel.o
+                                         0x2c (size before relaxing)
+ .comment       0x0000000000000000       0x2c ../../simpleio/libio.a(simpleio.o)
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 ../../simpleio/libio.a(simpleio.o)
