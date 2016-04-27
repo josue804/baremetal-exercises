@@ -46,7 +46,8 @@ void mapPage(struct Pdir* pdir, unsigned virt, unsigned phys) {
     }
 
     // TODO: Find the relevant entry in the page directory
-
+    // struct Ptab* ptab;
+    // unsigned idx = maskTo(virt >> PAGESIZE, 10);    
     // TODO: report a fatal error if there is already a
     //       superpage mapped at that address (this shouldn't
     //       be possible at this stage, but we're programming
@@ -56,6 +57,16 @@ void mapPage(struct Pdir* pdir, unsigned virt, unsigned phys) {
     //       then allocate a new page table and update the pdir
     //       to point to it.   (use PERMS_USER_RW together with
     //       the new page table's *physical* address for this.)
+/*    if ((pde&1)==1){
+	ptab = allocPtab();
+	pdir->pde[dir] = toPhys(ptab) | PERMS_USER_RW;
+    } else {
+	ptab = fromPhys(struct Ptab*, alignTo(pde, PAGESIZE));
+
+	if (ptab->pte[idx]&1) {
+		fatal("Page is already mapped\n");
+	}
+    }
 
     // TODO: If there was an existing page table (i.e., the PDE
     //       pointed to a page table), then report a fatal error
@@ -65,6 +76,7 @@ void mapPage(struct Pdir* pdir, unsigned virt, unsigned phys) {
     //       the mapping of virt to phys.  (Use PERMS_USER_RW
     //       again, this time combined with the value of the
     //       phys parameter that was supplied as an input.)
+    ptab->pte[idx] = phys | PERMS_USER_RW;*/
 }
 
 /*-------------------------------------------------------------------------

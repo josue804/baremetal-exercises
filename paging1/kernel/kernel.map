@@ -31,47 +31,47 @@ Linker script and memory map
                 0x00000000c0100000                entry
                 0x00000000c0100072                halt
                 0x00000000c0100700                switchToUser
- .text          0x00000000c0100719      0x21b kernel.o
-                0x00000000c0100719                kernel
-                0x00000000c01008dc                fatal
-                0x00000000c01008fc                allocPage
-                0x00000000c0100914                csyscall
- .text          0x00000000c0100934      0x158 paging.o
-                0x00000000c0100934                allocPdir
-                0x00000000c0100940                allocPtab
-                0x00000000c010094c                mapPage
-                0x00000000c010096f                showPdir
- *fill*         0x00000000c0100a8c        0x4 
- .text          0x00000000c0100a90      0x471 ../../simpleio/libio.a(simpleio.o)
-                0x00000000c0100b34                setVideo
-                0x00000000c0100b3e                setWindow
-                0x00000000c0100b8c                setAttr
-                0x00000000c0100b96                cls
-                0x00000000c0100c19                putchar
-                0x00000000c0100d49                puts
-                0x00000000c0100d72                printf
- .text          0x00000000c0100f01       0x2b ../../simpleio/libio.a(serial.o)
-                0x00000000c0100f01                serial_putc
+ .text          0x00000000c0100719      0x30b kernel.o
+                0x00000000c0100719                fatal
+                0x00000000c0100739                kernel
+                0x00000000c01009ec                allocPage
+                0x00000000c0100a04                csyscall
+ .text          0x00000000c0100a24      0x158 paging.o
+                0x00000000c0100a24                allocPdir
+                0x00000000c0100a30                allocPtab
+                0x00000000c0100a3c                mapPage
+                0x00000000c0100a5f                showPdir
+ *fill*         0x00000000c0100b7c        0x4 
+ .text          0x00000000c0100b80      0x471 ../../simpleio/libio.a(simpleio.o)
+                0x00000000c0100c24                setVideo
+                0x00000000c0100c2e                setWindow
+                0x00000000c0100c7c                setAttr
+                0x00000000c0100c86                cls
+                0x00000000c0100d09                putchar
+                0x00000000c0100e39                puts
+                0x00000000c0100e62                printf
+ .text          0x00000000c0100ff1       0x2b ../../simpleio/libio.a(serial.o)
+                0x00000000c0100ff1                serial_putc
  *(.handlers)
-                0x00000000c0100f2c                _text_end = .
+                0x00000000c010101c                _text_end = .
  *(.rodata*)
  .rodata.str1.1
-                0x00000000c0100f2c       0xba kernel.o
- *fill*         0x00000000c0100fe6        0x2 
+                0x00000000c010101c       0xd3 kernel.o
+ *fill*         0x00000000c01010ef        0x1 
  .rodata.str1.4
-                0x00000000c0100fe8       0xe5 kernel.o
- *fill*         0x00000000c01010cd        0x3 
+                0x00000000c01010f0      0x10d kernel.o
+ *fill*         0x00000000c01011fd        0x3 
  .rodata.str1.4
-                0x00000000c01010d0       0xa0 paging.o
+                0x00000000c0101200       0xa0 paging.o
                                          0x9f (size before relaxing)
  .rodata.str1.1
-                0x00000000c0101170       0x18 paging.o
+                0x00000000c01012a0       0x18 paging.o
  .rodata.str1.1
-                0x00000000c0101188        0x7 ../../simpleio/libio.a(simpleio.o)
- *fill*         0x00000000c010118f        0x1 
- .rodata        0x00000000c0101190       0x58 ../../simpleio/libio.a(simpleio.o)
+                0x00000000c01012b8        0x7 ../../simpleio/libio.a(simpleio.o)
+ *fill*         0x00000000c01012bf        0x1 
+ .rodata        0x00000000c01012c0       0x58 ../../simpleio/libio.a(simpleio.o)
  *(.data)
- *fill*         0x00000000c01011e8      0xe18 
+ *fill*         0x00000000c0101318      0xce8 
  .data          0x00000000c0102000     0x28d0 init.o
                 0x00000000c0102000                initdir
  .data          0x00000000c01048d0        0x0 kernel.o

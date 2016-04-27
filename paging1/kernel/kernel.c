@@ -91,7 +91,6 @@ void kernel() {
   // TODO: Remove the following halt() call once you are
   // ready to proceed!
 
-  halt();
 
   // TODO: Scan the memory map to find the biggest region of
   // available pages subject to the constraints:
@@ -103,17 +102,45 @@ void kernel() {
   //    byte in a page); it must be greater than physStart; and
   //    it must be less than PHYSMAP.  (It cannot be equal to
   //    PHYSMAP because PHYSMAP has zero offset.)
+  
+  unsigned suitableFound = 0;
+  for (i=0; i<mmap[0]; i++) {
+	unsigned startBlock = firstPageAfter(mmap[2*i+1]);
+	unsigned endBlock = endPageBefore(mmap[2*i+2]);
 
+	if(startBlock >= KERNEL_LOAD && endBlock < PHYSMAP){
+		if(1 + endBlock - startBlock > 1 + physEnd - physStart){
+			physStart = startBlock;
+			physEnd = endBlock;
+			suitableFound = 1;
+		}
+	}
+  }
   // TODO: Report a fatal error if there is no suitable region
   // of memory.
+
+  if(suitableFound == 0)
+	fatal("No suitable region of memory found!\n");
 
   // TODO: Scan the list of headers for loaded regions of memory
   // to look for conflicts with the [physStart..physEnd) region.
   // If you find a conflict, increase physStart to point to the
   // start of the first page after the conflicting region.
+  for (i=0; i<hdrs[0]; i++) {
+	 printf(" header[%d]: [%x-%x], entry %x\n",
+           i, hdrs[3*i+1], hdrs[3*i+2], hdrs[3*i+3]);
+	unsigned headerStart = hdrs[3*i+1];
+	unsigned headerEnd = hdrs[3*i+2];
+
+	while(physStart <= headerEnd){
+		physStart = pageNext(physStart);
+	}
+  } 
 
   // TODO: Report a fatal error if this process has resulting in
   // an empty region of physical memory.
+  if(1 + physEnd - physStart == 0)
+  	fatal("Memory region is empty!\n");
 
   // Display the upper and lower bounds of the chosen memory
   // region, as well as the total number of bytes that it

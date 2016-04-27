@@ -1,4 +1,4 @@
-GAS LISTING /tmp/ccgdIXto.s 			page 1
+GAS LISTING /tmp/ccmVw3xk.s 			page 1
 
 
    1              	# 1 "init.S"
@@ -58,7 +58,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
   41              	
   42 0009 B9000400 		movl    $1024, %ecx     # Zero out complete page directory
   42      00
-GAS LISTING /tmp/ccgdIXto.s 			page 2
+GAS LISTING /tmp/ccmVw3xk.s 			page 2
 
 
   43 000e B8000000 		movl    $0, %eax
@@ -118,7 +118,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
   85 0073 E9FCFFFF 		jmp	halt
   85      FF
   86              	
-GAS LISTING /tmp/ccgdIXto.s 			page 3
+GAS LISTING /tmp/ccmVw3xk.s 			page 3
 
 
   87              	#--------------------------------------------------------------------------
@@ -178,7 +178,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  133              	#   6  user code	; user segments
  134              	#   7  user data
  135              	# For the purposes of caching, we will start the GDT at a 128 byte aligned
-GAS LISTING /tmp/ccgdIXto.s 			page 4
+GAS LISTING /tmp/ccmVw3xk.s 			page 4
 
 
  136              	# address; older processors have 32 byte cache lines while newer ones have
@@ -238,7 +238,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  182              		# type = 0x09 (GDT_TSS32) => 32 bit tss system descriptor
  183              		#
  184              		# The following comments use # for concatenation of bitdata
-GAS LISTING /tmp/ccgdIXto.s 			page 5
+GAS LISTING /tmp/ccmVw3xk.s 			page 5
 
 
  185              		#
@@ -298,7 +298,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  217              	> 
  217              	>  
  217              	> 
-GAS LISTING /tmp/ccgdIXto.s 			page 6
+GAS LISTING /tmp/ccmVw3xk.s 			page 6
 
 
  217              	>  .set KERN_CS,(4<<3)|0
@@ -358,7 +358,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  220              	>  
  220              	> 
  220              	>  
-GAS LISTING /tmp/ccgdIXto.s 			page 7
+GAS LISTING /tmp/ccmVw3xk.s 			page 7
 
 
  220              	>  
@@ -418,7 +418,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  223              	>  
  223              	>  
  223              	>  
-GAS LISTING /tmp/ccgdIXto.s 			page 8
+GAS LISTING /tmp/ccmVw3xk.s 			page 8
 
 
  223              	> 
@@ -478,7 +478,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  226              	>  
  226              	> 
  226              	>  
-GAS LISTING /tmp/ccgdIXto.s 			page 9
+GAS LISTING /tmp/ccmVw3xk.s 			page 9
 
 
  226              	>  
@@ -538,7 +538,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  229              	>  
  229              	>  
  229              	>  
-GAS LISTING /tmp/ccgdIXto.s 			page 10
+GAS LISTING /tmp/ccmVw3xk.s 			page 10
 
 
  229              	>  
@@ -598,7 +598,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  229      0000
  230              	
  231 01a9 0F0115C0 		lgdt	gdtptr
-GAS LISTING /tmp/ccgdIXto.s 			page 11
+GAS LISTING /tmp/ccmVw3xk.s 			page 11
 
 
  231      200000
@@ -658,7 +658,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  280              		movl	%edx, idt + (4 + 8*\slot)
  281              		.endm
  282              	
-GAS LISTING /tmp/ccgdIXto.s 			page 12
+GAS LISTING /tmp/ccmVw3xk.s 			page 12
 
 
  283              	initIDT:# Add descriptors for exception & interrupt handlers:
@@ -718,7 +718,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  284              	>>  
  284              	>>  
  284              	>>  
-GAS LISTING /tmp/ccgdIXto.s 			page 13
+GAS LISTING /tmp/ccmVw3xk.s 			page 13
 
 
  284              	>> 
@@ -778,7 +778,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  284 0245 66B82000 	>>  mov $KERN_CS,%ax
  284 0249 C1E010   	>>  shl $16,%eax
  284 024c BAB00400 	>>  movl $exc4,%edx
-GAS LISTING /tmp/ccgdIXto.s 			page 14
+GAS LISTING /tmp/ccmVw3xk.s 			page 14
 
 
  284      00
@@ -838,7 +838,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  284      0000
  284              	> 
  284              	>  idtcalc exc7,slot=7
-GAS LISTING /tmp/ccgdIXto.s 			page 15
+GAS LISTING /tmp/ccmVw3xk.s 			page 15
 
 
  284              	>> 
@@ -898,7 +898,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  284              	>> 
  284              	>>  
  284              	>>  
-GAS LISTING /tmp/ccgdIXto.s 			page 16
+GAS LISTING /tmp/ccmVw3xk.s 			page 16
 
 
  284              	>> 
@@ -958,7 +958,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  284      00
  284 0323 6689D0   	>>  mov %dx,%ax
  284 0326 66BA008E 	>>  mov $(0x8e00|(0<<13)|IDT_INTR),%dx
-GAS LISTING /tmp/ccgdIXto.s 			page 17
+GAS LISTING /tmp/ccmVw3xk.s 			page 17
 
 
  284 032a A3282100 	>>  movl %eax,idt+( 8*11)
@@ -1018,7 +1018,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  284              	>> 
  284              	>>  
  284              	>>  
-GAS LISTING /tmp/ccgdIXto.s 			page 18
+GAS LISTING /tmp/ccmVw3xk.s 			page 18
 
 
  284              	>>  
@@ -1078,7 +1078,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  284              	>> 
  284              	>>  
  284              	>> 
-GAS LISTING /tmp/ccgdIXto.s 			page 19
+GAS LISTING /tmp/ccmVw3xk.s 			page 19
 
 
  284 03ad 66B82000 	>>  mov $KERN_CS,%ax
@@ -1138,7 +1138,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  284 03fc A3682100 	>>  movl %eax,idt+( 8*19)
  284      00
  284 0401 89156C21 	>>  movl %edx,idt+(4+8*19)
-GAS LISTING /tmp/ccgdIXto.s 			page 20
+GAS LISTING /tmp/ccmVw3xk.s 			page 20
 
 
  284      0000
@@ -1198,7 +1198,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  315              		push	%es
  316              		push	%ds
  317              		pusha			# Save registers
-GAS LISTING /tmp/ccgdIXto.s 			page 21
+GAS LISTING /tmp/ccmVw3xk.s 			page 21
 
 
  318              		push	%esp		# push pointer to frame for handler
@@ -1258,7 +1258,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  332 046a 61       	>  popa
  332 046b 83C404   	>  addl $4,%esp
  332 046e CF       	>  iret
-GAS LISTING /tmp/ccgdIXto.s 			page 22
+GAS LISTING /tmp/ccmVw3xk.s 			page 22
 
 
  333              		handler	num=2,  func=nohandler			# NMI
@@ -1318,7 +1318,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  335 04b9 60       	>  pusha 
  335 04ba 54       	>  push %esp
  335 04bb B8040000 	>  movl $4,%eax
-GAS LISTING /tmp/ccgdIXto.s 			page 23
+GAS LISTING /tmp/ccmVw3xk.s 			page 23
 
 
  335      00
@@ -1378,7 +1378,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  338 050f 90       	>  .align 16
  338              	> exc7:
  338              	>  .if 0==0
-GAS LISTING /tmp/ccgdIXto.s 			page 24
+GAS LISTING /tmp/ccmVw3xk.s 			page 24
 
 
  338 0510 83EC04   	>  subl $4,%esp
@@ -1438,7 +1438,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  340 0560 E82A0100 	>  call nohandler
  340      00
  340 0565 83C404   	>  addl $4,%esp
-GAS LISTING /tmp/ccgdIXto.s 			page 25
+GAS LISTING /tmp/ccmVw3xk.s 			page 25
 
 
  340 0568 07       	>  popl %es
@@ -1498,7 +1498,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  343              	>  .endif
  343 05b0 0FA8     	>  push %gs
  343 05b2 0FA0     	>  push %fs
-GAS LISTING /tmp/ccgdIXto.s 			page 26
+GAS LISTING /tmp/ccmVw3xk.s 			page 26
 
 
  343 05b4 06       	>  push %es
@@ -1558,7 +1558,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  345 0606 1F       	>  popl %ds
  345 0607 61       	>  popa
  345 0608 83C404   	>  addl $4,%esp
-GAS LISTING /tmp/ccgdIXto.s 			page 27
+GAS LISTING /tmp/ccmVw3xk.s 			page 27
 
 
  345 060b CF       	>  iret
@@ -1618,7 +1618,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  348 0658 1E       	>  push %ds
  348 0659 60       	>  pusha 
  348 065a 54       	>  push %esp
-GAS LISTING /tmp/ccgdIXto.s 			page 28
+GAS LISTING /tmp/ccmVw3xk.s 			page 28
 
 
  348 065b B8120000 	>  movl $18,%eax
@@ -1678,7 +1678,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  366              		#------------------------------------------------------------------
  367              		# Initialize PIC:
  368              		# Configure standard 8259 programmable interrupt controller
-GAS LISTING /tmp/ccgdIXto.s 			page 29
+GAS LISTING /tmp/ccmVw3xk.s 			page 29
 
 
  369              		# to remap hardware irqs 0x0-0xf into the range 0x20-0x2f.
@@ -1738,7 +1738,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  395 06ea C3       		ret
  396              	
  397              	#--------------------------------------------------------------------------
-GAS LISTING /tmp/ccgdIXto.s 			page 30
+GAS LISTING /tmp/ccmVw3xk.s 			page 30
 
 
  398              	# Simple system call handler:
@@ -1783,7 +1783,7 @@ GAS LISTING /tmp/ccgdIXto.s 			page 1
  434 0718 CF       		iret			# Return from interrupt
  435              	
  436              	#-- Done ---------------------------------------------------------------------
-GAS LISTING /tmp/ccgdIXto.s 			page 31
+GAS LISTING /tmp/ccmVw3xk.s 			page 31
 
 
 DEFINED SYMBOLS
@@ -1843,7 +1843,7 @@ DEFINED SYMBOLS
               init.S:370    *ABS*:0000000000000020 PIC_MASTER
               init.S:371    *ABS*:00000000000000a0 PIC_SLAVE
               init.S:421    *ABS*:0000000000000048 CONTEXT_SIZE
-GAS LISTING /tmp/ccgdIXto.s 			page 32
+GAS LISTING /tmp/ccmVw3xk.s 			page 32
 
 
               init.S:423    .text:0000000000000700 switchToUser

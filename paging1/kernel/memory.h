@@ -50,7 +50,7 @@
 // that contains address x.  e.g., pageEnd(0x1234) = 0x1fff.
 #define pageEnd(x) (pageStart(x)+PAGEMASK)
 
-// pageNext(a) should return the address of the first byte in the
+// pageNext(x) should return the address of the first byte in the
 // page that comes immediately after the page containing x.
 // e.g., pageNext(0x1234) = 0x2000.
 #define pageNext(x) (pageEnd(x) + 1) 
